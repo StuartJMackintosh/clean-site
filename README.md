@@ -29,7 +29,7 @@ Title: Test site
 Description: System thinking and design for a better digital world
 Img: /assets-6433359e750f3/images/head.jpeg
 hidden: true
-
+template: post / contact / bio / team
 
 ### Site variables (_meta.md)
 
@@ -47,12 +47,6 @@ Social:
     - title: Visit us on GitHub
       url: https://github.com/StuartJMackintosh
       icon: github
-    - title: Join us on Libera.Chat
-      url: https://web.libera.chat/#picocms
-      icon: comments
-    - title: Help us by creating/collecting bounties and pledging to fundraisers
-      url: https://www.bountysource.com/teams/picocms
-      icon: dollar-sign
     - title: Linkedin
       url: https://www.linkedin.com/in/stuartjmackintosh/
       icon: linkedin
@@ -60,9 +54,24 @@ Social:
 if ypu want a favicon, set this in _meta.md. If unset, no favicon will be served.
 favicon: %assets_url%/images/favicon.ico
 
-
 blogdir: blog #if subfolder exists with this name, showlist of articles, newest first
 showing title, desc, author, date
+
+## Templates
+
+In addition to the default 'index' template, there are some other qiick templates that render content and provide automated pages.
+
+These are:
+
+### contact
+
+### team
+
+
+### bio
+
+
+### post
 
 
 
