@@ -1,0 +1,37 @@
+
+
+<!-- Footer -->
+<footer class="border-top">
+	<div class="container px-4 px-lg-5">
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-10 col-lg-8 col-xl-7">
+				<ul class="list-inline text-center">
+				{% for social in pages["_meta"].meta.social %}
+					<li class="list-inline-item">
+						<a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
+							<span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-{{ social.icon }} fa-stack-1x fa-inverse"></i>
+                            </span>
+						</a>
+					</li>
+				{% endfor %}
+				</ul>
+				<div class="small text-center text-muted fst-italic">&copy;{{ 'now' | date('Y') }}&nbsp;{{ site_title }}, All Right Reserved.</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="{{ theme_url }}/js/bootstrap.bundle.min.js"></script>
+{% if page_number > 1 %}
+<!-- Core theme JS-->
+<script src="{{ theme_url }}/js/scripts.js"></script>
+{% endif %}
+<!-- Font Awesome icons (free version)-->
+<script defer src="{{ theme_url }}/js/all.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+

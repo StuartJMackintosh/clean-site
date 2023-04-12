@@ -1,0 +1,53 @@
+
+<hr/>
+
+<h1>DEBUG</h1>
+
+<h2>Theme vars:</h2>
+<pre>		
+
+meta.title: {{ meta.title }}
+site_title: {{ site_title }}
+base_url:{{ base_url }}
+theme_url: {{ theme_url }}
+assets:url: {{ assets_url }}
+plugins_url: {{ plugins_url }}
+version: {{ version }}
+
+Config array:
+{% for configs in config %}
+ {{ configs }}: {{ config.configs }}
+{% endfor %}
+
+Meta array:
+{% for metas in meta %}
+ {{ meta.metas }} {{ metas }}
+{% endfor %}
+
+
+
+
+current_page:
+
+current_page.id: {{ current_page.id }}
+current_page.url: {{ current_page.url }}
+prev_page.id: {{ prev_page.id }}
+
+current_page.date_formatted: {{ current_page.date_formatted }}
+current_page.prev_page: {{ current_page.prev_page }}
+current_page.next_page: {{ current_page.next_page }}
+
+nodes:
+{% for nodes in current_page.tree_node %}
+ {{ nodes }}: {{ current_page.tree_node.nodes }}
+{% endfor %}
+
+Filters:
+
+current_page.url|url: {{ current_page.url|url }}
+
+</pre>
+
+
+<hr/>
+

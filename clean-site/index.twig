@@ -1,0 +1,20 @@
+
+{{ include('_header.twig') }}
+
+
+<div class="container px-4 px-lg-5">
+    <!-- Main Content -->
+	<div class="row gx-4 gx-lg-5 justify-content-center">
+        <div id="main" role="main">
+            <div class="container">
+                {{ content }}
+
+                {% if meta.debug %}
+                {{ include('_debug.twig') }}
+                {% endif %}
+            </div>
+        </div>
+	</div>
+</div>
+		
+{{ include('_footer.twig') }}

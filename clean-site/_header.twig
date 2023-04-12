@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="author" content="{{ config.author }}">
+	
+<title>
+    {% if meta.title %}{{ meta.title }} {% else %} {{ site_title }} {% endif %}
+    {{ pages["_meta"].meta.tagline|striptags }}
+</title>
+
+{% if meta.description %}
+<meta name="description" content="{{ meta.description|striptags }}" />
+{% endif %}
+    
+{% if meta.robots %}
+<meta name="robots" content="{{ meta.robots }}" />
+{% endif %}
+
+{% if current_page %}
+<link rel="canonical" href="{{ current_page.url }}" />
+{% endif %}
+
+{% if pages["_meta"].meta.favicon %}
+<link rel='icon' href='{{ pages["_meta"].meta.favicon|url }}' type='image/x-icon' sizes="48x48" />
+{% else %}
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+{% endif %}
+
+<!-- [ Social Media Meta Tags ] -->
+<meta content='{{ site_title }}' property='og:title'/>
+<meta content='website' property='og:type'/>
+<meta content='{{ current_page.url }}' property='og:url'/>
+<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' property='og:image'/>
+<meta content="{{ meta.description|striptags }}" property='og:description'/>
+<meta content='{{ site_title }}' property='og:site_name'/>
+<meta content='en_US' property='og:locale'/>
+<meta content='summary_large_image' name='twitter:card'/>
+<meta content='{{ site_title }}' name='twitter:title'/>
+<meta content='{{ config.twitter }}' name='twitter:site'/>
+<meta content='{{ config.twitter }}' name='twitter:creator'/>
+<meta content='{{ meta.description|striptags }}' name='twitter:description'/>
+<meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' name='twitter:image'/>
+
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{{ theme_url }}/css/styles.css" rel="stylesheet">
+		
+{% if meta.template == 'post' %} 
+<script type="application/ld+json">
+<!-- template: post -->
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ meta.title }}",
+  "image": "{{ meta.img }}",
+  "datePublished": "{{ meta.date }}",
+  "author": {
+	  "@type": "Person",
+	  "name": "{{ meta.author }}",
+	  "url": "{{ meta.profile }}"
+	}
+}
+</script>
+{% endif %}
+		
+</head>
+
+<body>
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+		
+	<!-- Display logo topleft -->
+	{% if pages["_meta"].meta.logo %}
+        <div id="logo" aria-hidden="true">
+            <a href="{{ "index"|link }}">
+                <img src="{{ pages["_meta"].meta.logo|url }}" 
+                style="object-fit:scale-down; width:100px;"
+                alt="{% if meta.title %}{{ meta.title }} {% else %} {{ site_title }} {% endif %} logo" />
+            </a>
+        </div>
+    {% else %}
+        <a class="navbar-brand" href="/">Home</a>
+    {% endif %}
+
+<!-- Build dynamic nav-->
+            
+        <ul class="nav">
+            {% for page in pages() if page.title and not page.hidden %}
+            {% if not page.template %}
+            <li{% if page.id == current_page.id %} class="active"{% endif %}>
+                <a class="navbar-brand" href="{{ page.url }}">{{ page.title }}</a>
+            {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>	
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: {% if meta.img %} url({{ meta.img }}) {% else %} url('{{ theme_url }}/img/home-bg.webp'){% endif %};">
+	<div class="container position-relative px-4 px-lg-5">
+			
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-10 col-lg-8 col-xl-7">
+				<div class="site-heading">
+					<h1>{% if meta.title %}{{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
+                    {% if is_front_page %}
+					<span class="subheading">{{ pages["_meta"].meta.tagline|markdown }}</span>
+                    {% endif %}
+
+					    {% if meta.description %}
+                        <p>{{ meta.description|markdown }}</p>
+                        {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>		

@@ -1,0 +1,57 @@
+
+
+
+{{ include('_header.twig') }}
+
+<div class="container px-4 px-lg-5">
+    <!-- Main Content -->
+	<div class="row gx-4 gx-lg-5 justify-content-center">
+        <div id="main" role="main">
+            <div class="container">
+                {{ content }}
+            </div>
+        </div>
+	</div>
+
+
+<!-- change to foreach loop built from an array in the meta 
+To include
+- picture link
+- Name
+- Bio
+-->
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="image1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <p class="card-text">John is a senior software engineer with 5+ years of experience in the IT field.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="image2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Jane Doe</h5>
+                    <p class="card-text">Jane is a web designer with 8+ years of experience in the digital marketing field.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <img src="image3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Kate Johnson</h5>
+                    <p class="card-text">Kate is a UX designer with 10+ years of experience in the design industry.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+     
+
+{{ include('_footer.twig') }}

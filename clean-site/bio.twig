@@ -1,0 +1,99 @@
+
+{{ include('_header.twig') }}
+
+<div class="container px-4 px-lg-5">    
+    <!-- Main Content -->
+	<div class="row gx-4 gx-lg-5 justify-content-center">
+        <div id="main" role="main">
+            <div class="container">
+                {{ content }}
+            </div>
+        </div>
+	</div>
+
+    
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h1>John Doe</h1>
+                        <h3>Curriculum Vitae</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h2>Education</h2>
+                                <ul>
+                                    <li>University of California, Los Angeles (UCLA)</li>
+                                    <li>Bachelor of Science, Computer Science</li>
+                                    <li>GPA: 3.8/4.0</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Contact Information</h2>
+                                <ul>
+                                    <li>Email: john@doe.com</li>
+                                    <li>Phone: (123)456-7890</li>
+                                    <li>Website: www.johndoe.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Experience</h2>
+                                <ul>
+                                    <li>Software Engineer, ABC Corporation (2012-2015)</li>
+                                    <li>Developed a web-based application for managing customer data</li>
+                                    <li>Assisted in the development of a mobile application for sales tracking</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Skills</h2>
+                                <ul>
+                                    <li>Proficient in Java, C++, and HTML/CSS</li>
+                                    <li>Familiar with mobile application development</li>
+                                    <li>Strong understanding of software design principles</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Timeline of Achievements</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <h3>2012</h3>
+                                            <p>Started working at ABC Corporation as a Software Engineer.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <h3>2013</h3>
+                                            <p>Developed a web-based application for managing customer data.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <h3>2014</h3>
+                                            <p>Assisted in the development of a mobile application for sales tracking.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-content">
+                                            <h3>2015</h3>
+                                            <p>Left ABC Corporation and started freelancing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{ include('_footer.twig') }}    
+    

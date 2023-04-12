@@ -1,0 +1,36 @@
+
+        <!-- Articles / blog list -->
+		<div class="col-md-10 col-lg-8 col-xl-7">
+
+            {% if pages["_meta"].meta.blogdir %}
+                {% for page in pages(pages["_meta"].meta.blogdir) |sort_by("time")|reverse  %}
+			<div class="post-preview">
+				<a href="{{ page.url }}">
+		    		<h2 class="post-title">
+		    			{{ page.title }}
+		    		</h2>
+		    		<h3 class="post-subtitle">
+		    			{{ page.description }}
+		    		</h3>
+    			</a>
+				<p class="post-meta">Posted by&nbsp;{{ page.author }}&nbsp;on&nbsp;{{ page.date }}</p>
+        	</div>
+			<!-- Divider-->
+			<hr class="my-4" />
+			    {% endfor %}
+            {% endif %}
+
+			<!-- Pager (to be adapted to default as we dont have the plugin)-->
+			<div class="d-flex justify-content-end mb-4">
+				
+				{% if page_number > 1 %}
+				<a class="btn btn-primary text-uppercase" href="{{ base_url }}/{{ page_indicator }}/{{ page_number - 1 }}">&larr; Newer Posts</a>
+				{% endif %}
+					
+				{% if page_number < total_pages %} 
+				<a class="btn btn-primary text-uppercase" href="{{ base_url }}/{{ page_indicator }}/{{ page_number + 1 }}">Older Posts →</a>
+				{% endif %}
+			</div>	
+
+		</div>
+
