@@ -74,6 +74,13 @@ These are:
 ### post
 
 
+## Debugging
+
+The debug page parameter includes a template to show current variables.
+
+just add debug: true to the meta on the page
+
+
 
 
 
