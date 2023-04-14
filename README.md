@@ -3,12 +3,14 @@
 
 > ALPHA incomplete
 
+This theme is specifically built for pico_cms on Nextcloud, to deliver a straight forward elegant boostratp 5 site.
+
 
 ## Origin
 
 Amalgamation of [https://github.com/BesrourMS/clean-blog](clean-blog) and default Pico theme
 
-requires no plugins, no 3rd party assets
+requires no plugins, no 3rd party / CDN assets
 
 
 ## Behavour
@@ -23,7 +25,9 @@ The theme reads various variables which are either system, site or page
 
 See std pico docs
 
-### Page variables  (page yaml)
+### Page variables  
+
+In the yaml block at the top of each page
 
 Title: Test site
 Description: System thinking and design for a better digital world
@@ -31,7 +35,9 @@ Img: /assets-6433359e750f3/images/head.jpeg
 hidden: true
 template: post / contact / bio / team
 
-### Site variables (_meta.md)
+### Site variables 
+
+In the file _meta.md
 
 Name
 : Logo
@@ -79,6 +85,12 @@ These are:
 The debug page parameter includes a template to show current variables.
 
 just add debug: true to the meta on the page
+
+
+## Author
+
+I am not a developer!
+
 
 
 
