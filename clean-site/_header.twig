@@ -3,27 +3,21 @@
 <head>
 
 <!-- General meta tags -->
+<title>{% if meta.title %}{{ meta.title }}{% else %}{{ site_title }}{% endif %} - {{ pages["_meta"].meta.tagline|striptags }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="author" content="{{ config.author }}">
-	
-<title>
-    {% if meta.title %}{{ meta.title }} {% else %} {{ site_title }} {% endif %}
-    {{ pages["_meta"].meta.tagline|striptags }}
-</title>
-
+{% if pages["_meta"].meta.author %}
+<meta name="author" content="{{ pages["_meta"].meta.author }}">
+{% endif %}
 {% if meta.description %}
 <meta name="description" content="{{ meta.description|striptags }}" />
 {% endif %}
-    
 {% if meta.robots %}
 <meta name="robots" content="{{ meta.robots }}" />
 {% endif %}
-
 {% if current_page %}
 <link rel="canonical" href="{{ current_page.url }}" />
 {% endif %}
-
 {% if pages["_meta"].meta.favicon %}
 <link rel='icon' href='{{ pages["_meta"].meta.favicon|url }}' type='image/x-icon' sizes="48x48" />
 {% else %}
@@ -31,13 +25,13 @@
 {% endif %}
 
 <!-- Open Graph (OG) tags: -->
-<meta content='{{ site_title }}' property='og:title'/>
-<meta content="{{ meta.description|striptags }}" property='og:description'/>
 <meta content='{{ site_title }}' property='og:site_name'/>
-<meta content='{% if meta.page_type %}{{ meta.page_type }} {% else %} website {% endif %}' property='og:type'/>
+<meta content='{% if meta.title %}{{ meta.title }}{% else %}{{ site_title }}{% endif %}' property='og:title'/>
+<meta content="{{ meta.description|striptags }}" property='og:description'/>
+<meta content='{% if page_type %}{{ page_type }}{% else %}website{% endif %}' property='og:type'/>
 <meta content='{{ current_page.url }}' property='og:url'/>
 <meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' property='og:image'/>
-<meta content='{% if meta.locale %}{{ meta.locale }} {% else %} en_UK {% endif %}' property='og:locale'/>
+<meta content='{% if meta.locale %}{{ meta.locale }}{% else %}en_UK{% endif %}' property='og:locale'/>
 
 <!-- Twitter meta data -->
 <meta content='summary_large_image' name='twitter:card'/>
@@ -49,7 +43,6 @@
 
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="{{ theme_url }}/css/styles.css" rel="stylesheet">
-		
 {% if meta.template == 'post' %} 
 <script type="application/ld+json">
 <!-- template: post -->
@@ -61,13 +54,12 @@
   "datePublished": "{{ meta.date }}",
   "author": {
 	  "@type": "Person",
-	  "name": "{{ meta.author }}",
+	  "name": "{{ pages["_meta"].meta.author }}",
 	  "url": "{{ meta.profile }}"
 	}
 }
 </script>
 {% endif %}
-		
 </head>
 
 <body>
