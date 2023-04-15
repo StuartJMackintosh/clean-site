@@ -176,6 +176,44 @@ The og:type tag in Open Graph (OG) protocol is used to specify the type of conte
 
 By using the appropriate og:type content string for your web page, you can help social media platforms to better understand the type of content on your page and display it in a way that is most appropriate and engaging for users.
 
+> list all og:type  content strings
 
+Here is a comprehensive list of og:type content strings that are recognized by the Open Graph (OG) protocol:
 
+1. activity: For web pages that describe an activity, such as a workout or a game.
+2. actor: For web pages that describe a person who performs in a film or on stage.
+3. album: For web pages that describe a music album.
+4. article: For web pages that contain news articles, blog posts, or any other kind of written content.
+5. athlete: For web pages that describe a person who participates in sports.
+6. author: For web pages that describe a person who wrote a book or other written material.
+7. band: For web pages that describe a musical group or band.
+8. book: For web pages that contain information about a book or other written material.
+9. business: For web pages that describe a business.
+10. cause: For web pages that describe a charitable cause or organization.
+11. city: For web pages that describe a city or town.
+12. company: For web pages that describe a company or organization.
+13. country: For web pages that describe a country.
+14. drink: For web pages that describe a beverage.
+15. education: For web pages that describe a school, university, or other educational institution.
+16. event: For web pages that describe an event, such as a concert or festival.
+17. game: For web pages that describe a video game.
+18. government: For web pages that describe a government agency or organization.
+19. hotel: For web pages that describe a hotel or other lodging.
+20. insight: For web pages that provide insight into a particular topic.
+21. landmark: For web pages that describe a landmark or point of interest.
+22. magazine: For web pages that describe a magazine or other periodical.
+23. movie: For web pages that describe a movie or film.
+24. music: For web pages that contain music or audio content.
+25. non_profit: For web pages that describe a non-profit organization.
+26. place: For web pages that describe a physical location, such as a business or a tourist attraction.
+27. product: For web pages that contain information about a product, such as an e-commerce product page.
+28. profile: For web pages that contain information about a person, such as a personal or professional profile.
+29. restaurant: For web pages that describe a restaurant or other food establishment.
+30. school: For web pages that describe a school or educational institution.
+31. song: For web pages that contain information about a song or musical composition.
+32. sport: For web pages that describe a particular sport.
+33. team: For web pages that describe a sports team.
+34. website: For web pages that are not specific to any particular type of content, such as a homepage or a landing page.
+
+By using the appropriate og:type content string for your web page, you can help social media platforms to better understand the type of content on your page and display it in a way that is most appropriate and engaging for users.
 
