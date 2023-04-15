@@ -34,7 +34,7 @@
 <meta content='{{ site_title }}' property='og:title'/>
 <meta content="{{ meta.description|striptags }}" property='og:description'/>
 <meta content='{{ site_title }}' property='og:site_name'/>
-<meta content='website' property='og:type'/>
+<meta content='{% if meta.page_type %}{{ meta.page_type }} {% else %} website {% endif %}' property='og:type'/>
 <meta content='{{ current_page.url }}' property='og:url'/>
 <meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' property='og:image'/>
 <meta content='{% if meta.locale %}{{ meta.locale }} {% else %} en_UK {% endif %}' property='og:locale'/>
