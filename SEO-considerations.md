@@ -176,7 +176,7 @@ The og:type tag in Open Graph (OG) protocol is used to specify the type of conte
 
 By using the appropriate og:type content string for your web page, you can help social media platforms to better understand the type of content on your page and display it in a way that is most appropriate and engaging for users.
 
-> list all og:type  content strings
+> list all og:type content strings
 
 Here is a comprehensive list of og:type content strings that are recognized by the Open Graph (OG) protocol:
 
