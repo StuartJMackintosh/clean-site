@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
+
+<!-- General meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="author" content="{{ config.author }}">
@@ -29,14 +30,16 @@
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 {% endif %}
 
-<!-- [ Social Media Meta Tags ] -->
+<!-- Open Graph (OG) tags: -->
 <meta content='{{ site_title }}' property='og:title'/>
+<meta content="{{ meta.description|striptags }}" property='og:description'/>
+<meta content='{{ site_title }}' property='og:site_name'/>
 <meta content='website' property='og:type'/>
 <meta content='{{ current_page.url }}' property='og:url'/>
 <meta content='{% if meta.img %}{{ meta.img | url }}{% else %}{{ theme_url }}/img/home-bg.webp{% endif %}' property='og:image'/>
-<meta content="{{ meta.description|striptags }}" property='og:description'/>
-<meta content='{{ site_title }}' property='og:site_name'/>
-<meta content='en_US' property='og:locale'/>
+<meta content='{% if meta.locale %}{{ meta.locale }} {% else %} en_UK {% endif %}' property='og:locale'/>
+
+<!-- Twitter meta data -->
 <meta content='summary_large_image' name='twitter:card'/>
 <meta content='{{ site_title }}' name='twitter:title'/>
 <meta content='{{ config.twitter }}' name='twitter:site'/>

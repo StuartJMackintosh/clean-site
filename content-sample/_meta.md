@@ -10,6 +10,7 @@ Social:
       icon: linkedin
 blogdir: blog
 favicon: %assets_url%/images/favicon.ico
-
+locale: en_UK
+robots: index, follow
 ---
 
