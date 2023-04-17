@@ -21,7 +21,7 @@
 {% if pages["_meta"].meta.favicon %}
 <link rel='icon' href='{{ pages["_meta"].meta.favicon|url }}' type='image/x-icon' sizes="48x48" />
 {% else %}
-<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+<link rel='icon' href='{{ theme_url }}/img/fvicon.ico' type='image/x-icon' />
 {% endif %}
 
 <!-- Open Graph (OG) tags: -->
