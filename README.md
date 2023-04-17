@@ -23,7 +23,7 @@ The theme reads various variables which are either system, site or page
 
 ### System variables
 
-See std pico docs
+See standard pico docs
 
 ### Page variables  
 
@@ -57,11 +57,17 @@ Social:
       url: https://www.linkedin.com/in/stuartjmackintosh/
       icon: linkedin
 
-if ypu want a favicon, set this in _meta.md. If unset, no favicon will be served.
+To provide a 48x48 favicon, set the path and name in _meta.md. If unset, a default favicon will be served.
 favicon: %assets_url%/images/favicon.ico
 
-blogdir: blog #if subfolder exists with this name, showlist of articles, newest first
+TODO: blogdir: blog #if subfolder exists with this name, showlist of articles, newest first
 showing title, desc, author, date
+
+
+
+## Pages
+
+Simply add pages to the folder and the title will appear in the menu, unless property ```hidden: true``` is set
 
 ## Templates
 
